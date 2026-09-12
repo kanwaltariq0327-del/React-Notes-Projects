@@ -15,4 +15,10 @@
 #### For Example:
 -> ```import {useState, useEffect} from 'react'```
 
-1- useState:
+## 1- useState:
+=> **useState** is used to store data.
+#### Example Code:
+```import { useState } from "react";```
+```function Counter() {```
+  ```const [count, setCount] = useState(0);```
+```return(<button onClick={() => setCount(count + 1)}>{count}</button>);}```
