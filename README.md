@@ -1,6 +1,6 @@
 # React-Notes
 => " We use react in order to deal & maintain complex front-end "
-evaluated **expression** {JavaScript final outcome that has been evaluated}
+- To inject JS code or variable inside our code we use: evaluated **expression** {JavaScript final outcome that has been evaluated} with curly parentheses.
 
 # Hooks:
 ## What is a Hook?
@@ -15,4 +15,10 @@ evaluated **expression** {JavaScript final outcome that has been evaluated}
 #### For Example:
 -> ```import {useState, useEffect} from 'react'```
 
-1- useState:
+## 1- useState:
+=> **useState** is used to store data.
+#### Example Code:
+```import { useState } from "react";```
+```function Counter() {```
+  ```const [count, setCount] = useState(0);```
+```return(<button onClick={() => setCount(count + 1)}>{count}</button>);}```
