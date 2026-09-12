@@ -1,6 +1,6 @@
 # React-Notes
 => " We use react in order to deal & maintain complex front-end "
-evaluated **expression** {JavaScript final outcome that has been evaluated}
+- To inject JS code or variable inside our code we use: evaluated **expression** {JavaScript final outcome that has been evaluated} with curly parentheses.
 
 # Hooks:
 ## What is a Hook?
