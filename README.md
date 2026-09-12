@@ -17,8 +17,28 @@
 
 ## 1- useState:
 => **useState** is used to store data.
+- Changing a normal variable doesn't tell React to render the component again but **setCount()** does.
+
 #### Example Code:
-```import { useState } from "react";```
-```function Counter() {```
-  ```const [count, setCount] = useState(0);```
-```return(<button onClick={() => setCount(count + 1)}>{count}</button>);}```
+    import { useState } from "react";
+
+      function Counter() {
+
+        const [count, setCount] = useState(0);
+  
+        return(
+          <button onClick={() => setCount(count + 1)}>
+            {count}
+          </button>);
+      }
+
+
+
+
+
+
+
+
+
+
+
