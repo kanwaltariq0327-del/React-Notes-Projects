@@ -18,6 +18,8 @@ function Lottery({n, winningSum}) {
             <br />
             <button onClick={geTicketBtn}>Buy Ticket</button>
             <h3>{isWinning && "Congratulations, you've won!🎉🥳🎊" }</h3>
+            <h2>Winning conidtion:</h2>
+            <p>if your ticket's number sums to 15!</p>
         </div>
     )
 }

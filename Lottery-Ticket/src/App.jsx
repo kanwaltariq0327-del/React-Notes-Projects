@@ -1,13 +1,12 @@
 import './App.css'
-//import Lottery from "./Lottery.jsx";
-import WeatherApp from './WeatherApp'
+import Lottery from "./Lottery.jsx";
 
 
 function App() {
 
   return (
     <>
-    <WeatherApp />
+    <Lottery n={3} winningSum={15}/>
     </>
   )
 }
