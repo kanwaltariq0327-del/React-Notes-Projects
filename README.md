@@ -49,8 +49,6 @@
 #### Basic Syntax:
     useEffect(setup, dependencies?)
 
-    function ChatRoom({ roomId }) {
-  const [serverUrl, setServerUrl] = useState('https://localhost:1234');
 
 #### Example Code:
     useEffect(() => {
@@ -64,7 +62,6 @@
 
 ## 6- useCallback:
 => **useCallback** is a React Hook that lets us cache a function definition between re-renders.
-- Changing a normal variable doesn't tell React to render the component again but **setCount()** does.
 
 #### Basic Syntax:
     const cachedFn = useCallback(fn, dependencies)
