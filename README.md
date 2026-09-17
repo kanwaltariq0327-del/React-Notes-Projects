@@ -101,8 +101,33 @@
         // ...
     }
 
+## 4- useContext:
+=> **useContext** allows a functional component to read and subscribe to shared data (context) without passing props through intermediate components.
+- This eliminates a common problem known as "prop drilling".
+- It is ideal for sharing global or app-wide configurations like:
+   - user authentication status,
+   - UI themes or
+   - language preferences
+- The Core Three Steps to Use Context:
+   -  Create: ```createContext()``` Instantiates the global context container.
+   -  Provide: ```<ThemeContext value={...}>``` Wraps parent components to supply the data down the tree.
+   -   Consume: ```useContext(ThemeContext)``` Extracts the current value inside any descendant component.
 
-## 4- useCallback:
+
+#### Example Code:
+#### 1st Step: Create a context:
+    const UserContext = createContext();
+
+#### 2nd Step: Provide the value:
+    <UserContext.Provider value="Ali">
+        <App />
+    </UserContext.Provider>
+
+#### 3rd Step: Another component can access it:
+    const user = useContext(UserContext);
+
+
+## 5- useCallback:
 => **useCallback** is a React Hook that lets us cache a function definition between re-renders.
 
 #### Basic Syntax:
