@@ -64,10 +64,10 @@ jobs:
           mkdir -p pages/Counter-React
           mkdir -p pages/React-Todo-App-with-ContextAPI
 
-           cp -r basic-react-app/dist/. pages/basic-react-app/
-           cp -r Lottery-Ticket/dist/. pages/Lottery-Ticket/
-           cp -r Counter-React/dist/. pages/Counter-React/
-           cp -r React-Todo-App-with-ContextAPI/dist/. pages/React-Todo-App-with-ContextAPI/
+          cp -r basic-react-app/dist/. pages/basic-react-app/
+          cp -r Lottery-Ticket/dist/. pages/Lottery-Ticket/
+          cp -r Counter-React/dist/. pages/Counter-React/
+          cp -r React-Todo-App-with-ContextAPI/dist/. pages/React-Todo-App-with-ContextAPI/
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
