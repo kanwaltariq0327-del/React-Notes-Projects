@@ -1,4 +1,4 @@
-name: Deploy React Projects to GitHub Pages
+name: Deploy React Projects
 
 on:
   push:
@@ -13,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
@@ -25,48 +25,42 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version: lts/*
+          node-version: 20
 
-      # Build project1
-      - name: Install and build basic-react-app
+      - name: Build basic-react-app
         working-directory: ./basic-react-app
         run: |
           npm ci
           npm run build
 
-      # Build project2
-      - name: Install and build Lottery-Ticket
+      - name: Build Lottery-Ticket
         working-directory: ./Lottery-Ticket
         run: |
           npm ci
           npm run build
 
-      # Create one folder containing all projects
-      - name: Create Pages directory
+      - name: Prepare Pages
         run: |
           mkdir -p pages/basic-react-app
           mkdir -p pages/Lottery-Ticket
 
-      # Copy each project's dist into its own folder
-      - name: Copy project builds
-        run: |
           cp -r project1/dist/. pages/basic-react-app/
           cp -r project2/dist/. pages/Lottery-Ticket/
 
-      - name: Setup GitHub Pages
+      - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+      - name: Upload Pages
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./pages
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
