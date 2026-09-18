@@ -50,8 +50,8 @@ jobs:
           mkdir -p pages/basic-react-app
           mkdir -p pages/Lottery-Ticket
 
-          cp -r project1/dist/. pages/basic-react-app/
-          cp -r project2/dist/. pages/Lottery-Ticket/
+           cp -r basic-react-app/dist/. pages/basic-react-app/
+           cp -r Lottery-Ticket/dist/. pages/Lottery-Ticket/
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
