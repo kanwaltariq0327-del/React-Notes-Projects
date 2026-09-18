@@ -45,13 +45,29 @@ jobs:
           npm ci
           npm run build
 
+      - name: Build Counter-React
+        working-directory: ./Counter-React
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build React-Todo-App-with-ContextAPI
+        working-directory: ./React-Todo-App-with-ContextAPI
+        run: |
+          npm ci
+          npm run build
+
       - name: Prepare Pages
         run: |
           mkdir -p pages/basic-react-app
           mkdir -p pages/Lottery-Ticket
+          mkdir -p pages/Counter-React
+          mkdir -p pages/React-Todo-App-with-ContextAPI/dist
 
            cp -r basic-react-app/dist/. pages/basic-react-app/
            cp -r Lottery-Ticket/dist/. pages/Lottery-Ticket/
+           cp -r Counter-React/dist/. pages/Counter-React/
+           cp -r React-Todo-App-with-ContextAPI/dist/. pages/React-Todo-App-with-ContextAPI/
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

@@ -8,4 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: "/React-Notes-Projects/React-Todo-App-with-ContextAPI/"
 })
