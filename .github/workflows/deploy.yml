@@ -62,7 +62,7 @@ jobs:
           mkdir -p pages/basic-react-app
           mkdir -p pages/Lottery-Ticket
           mkdir -p pages/Counter-React
-          mkdir -p pages/React-Todo-App-with-ContextAPI/dist
+          mkdir -p pages/React-Todo-App-with-ContextAPI
 
            cp -r basic-react-app/dist/. pages/basic-react-app/
            cp -r Lottery-Ticket/dist/. pages/Lottery-Ticket/
